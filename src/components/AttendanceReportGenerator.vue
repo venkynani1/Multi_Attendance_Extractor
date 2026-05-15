@@ -297,7 +297,6 @@
 import ExcelJS from 'exceljs';
 import Papa from 'papaparse';
 import moment from 'moment';
-import confetti from 'canvas-confetti';
 import {
   CheckCircle,
   Download,
@@ -1028,12 +1027,6 @@ export default {
       link.click();
       URL.revokeObjectURL(url);
       this.successMessage = 'Excel report exported successfully.';
-      confetti({
-        particleCount: 90,
-        spread: 62,
-        origin: { y: 0.72 },
-        colors: ['#2563eb', '#06b6d4', '#10b981', '#f59e0b'],
-      });
     },
 
     styleMainWorksheet(worksheet, headerLength) {
